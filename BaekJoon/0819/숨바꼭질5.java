@@ -35,7 +35,7 @@ public class 숨바꼭질5 {
         while (!queue.isEmpty()) {
             len = queue.size();
             time++;
-            mod = time % 2; // 홀수, 짝수 판단
+            mod = time % 2; 
  
             for (int i = 0; i < len; i++) {
                 int sb = queue.poll();
@@ -54,9 +54,9 @@ public class 숨바꼭질5 {
                 }
             }
  
-            int bro = getBro(time); // 동생의 위치
-            if (bro > 500000) break; // 동생이 500000보다 넘어간다면 -1
-            if (visit[mod][bro] != -1) return time; // 동생의 위치에 형이 있다면 time 반환
+            int bro = getBro(time); 
+            if (bro > 500000) break; 
+            if (visit[mod][bro] != -1) return time; 
         }
  
         return -1;
